@@ -15,7 +15,7 @@ const rs5x = require("5x-random-str")
 import * as rs5x from "5x-random-str";
 
 //iife
-<script src="https://unpkg.com/5x-random-str@1.0.2/index.js"></script>
+<script src="https://unpkg.com/5x-random-str/index.js"></script>
 const rs5x = window["5x-random-str"];
 ```
 ### simple default
