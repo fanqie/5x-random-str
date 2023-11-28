@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5x-random-str static html include example</title>
+    <script src="./index.js"></script>
+    <script>
+        const rs5x = window["5x-random-str"]
+    </script>
+</head>
+<body>
+<!--    根据example.js 里的控制台写html的例子-->
+<div><label>rs5x.randomStr(10)</label> =>>>>> <span id="example"></span></div>
+<div><label>rs5x.Number(6)</label> =>>>>> <span id="example2"></span></div>
+<script>
+    const example = document.getElementById("example")
+    example.innerHTML = rs5x.randomStr(10)
+    const example2 = document.getElementById("example2")
+    example2.innerHTML = rs5x.Number(6)
+</script>
+</body>
+</html>

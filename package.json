@@ -1,6 +1,6 @@
 {
   "name": "5x-random-str",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a randomly generated string project that can be used to generate passwords and/or strings of any length. It also allows customization of the random content range and provides the flexibility to set the delimiter positions and symbols without any specific rules or restrictions.",
   "main": "randomStr.js",
   "module": "index.js",
@@ -21,7 +21,9 @@
     "randomStr.js",
     "README.md",
     "rollup.config.js",
-    "package.json"
+    "package.json",
+    "randomStr.d.ts",
+    "example.html"
   ],
   "keywords": [
     "generate Password",

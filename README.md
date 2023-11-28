@@ -1,7 +1,7 @@
 ### introduction
 This is a randomly generated string project that can be used to generate passwords and/or strings of any length. It also allows customization of the random content range and provides the flexibility to set the delimiter positions and symbols without any specific rules or restrictions.
 
-这是一个随机生成的字符串项目，可用于生成任何长度的密码和/或字符串。它还允许自定义随机内容范围，并提供设置分隔符位置和符号的灵活性，而无需任何特定规则或限制。
+`这是一个随机生成的字符串项目，可用于生成任何长度的密码和/或字符串。它还允许自定义随机内容范围，并提供设置分隔符位置和符号的灵活性，而无需任何特定规则或限制。`
 ### install
 ```bash
 npm install 5x-random-str
@@ -9,135 +9,145 @@ npm install 5x-random-str
 ### import
 ```js 
 //commonjs
-const {CHARS, randomStr} = require("5x-random-str")
+const rs5x = require("5x-random-str")
+
 //es6+ 
-import {randomStr,CHARS} from "5x-random-str";
+import * as rs5x from "5x-random-str";
+
 //iife
-<script src="5x-random-str/index.js"></script>
+<script src="https://unpkg.com/5x-random-str@1.0.2/index.js"></script>
+const rs5x = window["5x-random-str"];
 ```
 ### simple default
-```js
-randomStr()
+```javascript
+rs5x.randomStr()
 ```    
-```    
-//result
+```bash
+#result
 a9ZOLl.@[7@K}RSA
 ```
+### use Number
+```javascript
+rs5x.Number(12)
+```
+```bash
+#result
+280127374882
+```
 ### use ABC
-```js
-ABC(12)
+```javascript
+rs5x.ABC(12)
 ```
-```
-//result
+```bash
+#result
 ZKVWGZYUAZSF
 ```
 ### use abc
-```js
-abc(12)
+```javascript
+rs5x.abc(12)
 ```
-```
-//result
+```bash
+#result
 gcdglealiwyv
 ```
 ### use ABC_abc
-```js
-ABC_abc(12)
+```javascript
+rs5x.ABC_abc(12)
 ```
-```
-//result
+```bash
+#result
 WbMaduuxDgfS
 ```
 
 ### use ABC_abc_123
-```js
-ABC_abc_123()
+```javascript
+rs5x.ABC_abc_123()
 ```
-```
-//result
+```bash
+#result
 kPo4gsk5KAC6GoN5
 ```
 ### use strongPasswd
-```js
-strongPasswd(12)
+```javascript
+rs5x.strongPasswd(12)
 ```
-```
-//result
+```bash
+#result
 #FIKz@bfMoHp
 ```
 ### use superPasswd
-```js
-superPasswd()
+```javascript
+rs5x.superPasswd()
 ```
-```
-//result
+```bash
+#result
 b,[NoxLTOV-c_1wT
 ```
 ### use length,use default chats,use upperCase
-```js
-randomStr(20, [],  true)
+```javascript
+rs5x.randomStr(20, [],  true)
 ```
 
-```
-//result
+```bash
+#result
 $C)5D})MBU*?U!~@.W!$
 ```
 ### use chars array const
-```js
-randomStr(6, [CHARS.ABC_XYZ,CHARS.abc_xyz],  true)
+```javascript
+rs5x.randomStr(6, [rs5x.CHARS.ABC_XYZ,rs5x.CHARS.abc_xyz],  true)
 ```
-
-```
-//result
+```bash
+#result
 CGZUYF
 ```
 ###  use  custom chars
-```js
-randomStr(1, ["甲乙丙丁戊己庚辛壬癸","尨"],  true)+randomStr(1, ["子丑寅卯辰巳午未申酉戌亥"],  true)
+```javascript
+rs5x.randomStr(1, ["甲乙丙丁戊己庚辛壬癸","尨"],  true)+rs5x.randomStr(1, ["子丑寅卯辰巳午未申酉戌亥"],  true)
 ```
-```
-//result
+```bash
+#result
 辛卯
 ```
 ### use more chars
-```js
-randomStr(32, [
-CHARS["+.(~)[]?}|{][,-"],
-CHARS["!@#$%^&*()_"]],  true)
+```javascript
+rs5x.randomStr(32, [
+    rs5x.CHARS["+.(~)[]?}|{][,-"],
+    rs5x.CHARS["!@#$%^&*()_"]],  true)
 ```
-```
-
+```bash
+#result
 ^.!)]-!,!{)&])(?[[#|.?]%~]}?}]])
 ```
 ### use separator
-```js
-randomStr(32, [
-CHARS.ABC_XYZ,
-CHARS.abc_xyz,
-CHARS["1234567890"]],  false,"-")
+```javascript
+rs5x.randomStr(32, [
+    rs5x.CHARS.ABC_XYZ,
+    rs5x.CHARS.abc_xyz,
+    rs5x.CHARS["1234567890"]],  false,"-")
 ```
-```
-
+```bash
+#result
 6E33-cs8K-mGBW-kg0V-toxp-dFmf-isOB-zShf
 ```
 ### use separator step
-```js
-randomStr(32, [
-CHARS.ABC_XYZ,
-CHARS.abc_xyz,
-CHARS["1234567890"]],  true,"__",5)
+```javascript
+rs5x.randomStr(32, [
+    rs5x.CHARS.ABC_XYZ,
+    rs5x.CHARS.abc_xyz,
+    rs5x.CHARS["1234567890"]],  true,"__",5)
 ```
-```
-//result
+```bash
+#result
 BATL6__LVCEU__OEKGY__AFZBT__UDZCK__PIR3G__B1
 ```
 ### use separator steps
-```js
-randomStr(32, [
-CHARS.ABC_XYZ,
-CHARS.abc_xyz,
-CHARS["1234567890"]],  false,"-",[4,4,4,8])
+```javascript
+rs5x.randomStr(32, [
+    rs5x.CHARS.ABC_XYZ,
+    rs5x.CHARS.abc_xyz,
+    rs5x.CHARS["1234567890"]],  false,"-",[4,4,4,8])
 ```
-```
-//result
+```bash
+#result
 xFWh-G1N8-lYcf-skfGREvM-MoKOo63d0PZK
 ```
