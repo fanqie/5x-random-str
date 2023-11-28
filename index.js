@@ -83,8 +83,40 @@
         return upperCase ? str.toUpperCase() : str;
     };
 
+    const ABC = (len = 16,
+                        separator = "",
+                        separatorSteps = 4) => {
+        return randomStr(len, [CHARS.ABC_XYZ],false,separator,separatorSteps)
+    };
+    const abc = (len = 16,separator = "",
+                        separatorSteps = 4) => {
+        return randomStr(len, [CHARS.abc_xyz],false,separator,separatorSteps)
+    };
+    const ABC_abc = (len = 16,separator = "",
+                            separatorSteps = 4) => {
+        return randomStr(len, [CHARS.ABC_XYZ, CHARS.abc_xyz],false,separator,separatorSteps)
+    };
+    const ABC_abc_123 = (len = 16,separator = "",
+                                separatorSteps = 4) => {
+        return randomStr(len, [CHARS.ABC_XYZ, CHARS.abc_xyz, CHARS["1234567890"]],false,separator,separatorSteps)
+    };
+    const strongPasswd = (len = 16,separator = "",
+                                 separatorSteps = 4) => {
+        return randomStr(len, [CHARS.ABC_XYZ, CHARS.abc_xyz, CHARS["1234567890"], CHARS["!@#$%^&*()_"]],false,separator,separatorSteps)
+    };
+    const superPasswd = (len = 16,separator = "",
+                                 separatorSteps = 4) => {
+        return randomStr(len, [CHARS.ABC_XYZ, CHARS.abc_xyz, CHARS["1234567890"],CHARS["+.(~)[]?}|{][,-"], CHARS["!@#$%^&*()_"]],false,separator,separatorSteps)
+    };
+
+    exports.ABC = ABC;
+    exports.ABC_abc = ABC_abc;
+    exports.ABC_abc_123 = ABC_abc_123;
     exports.CHARS = CHARS;
+    exports.abc = abc;
     exports.randomStr = randomStr;
+    exports.strongPasswd = strongPasswd;
+    exports.superPasswd = superPasswd;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

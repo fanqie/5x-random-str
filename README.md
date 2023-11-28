@@ -23,6 +23,55 @@ randomStr()
 //result
 a9ZOLl.@[7@K}RSA
 ```
+### use ABC
+```js
+ABC(12)
+```
+```
+//result
+ZKVWGZYUAZSF
+```
+### use abc
+```js
+abc(12)
+```
+```
+//result
+gcdglealiwyv
+```
+### use ABC_abc
+```js
+ABC_abc(12)
+```
+```
+//result
+WbMaduuxDgfS
+```
+
+### use ABC_abc_123
+```js
+ABC_abc_123()
+```
+```
+//result
+kPo4gsk5KAC6GoN5
+```
+### use strongPasswd
+```js
+strongPasswd(12)
+```
+```
+//result
+#FIKz@bfMoHp
+```
+### use superPasswd
+```js
+superPasswd()
+```
+```
+//result
+b,[NoxLTOV-c_1wT
+```
 ### use length,use default chats,use upperCase
 ```js
 randomStr(20, [],  true)
@@ -36,6 +85,7 @@ $C)5D})MBU*?U!~@.W!$
 ```js
 randomStr(6, [CHARS.ABC_XYZ,CHARS.abc_xyz],  true)
 ```
+
 ```
 //result
 CGZUYF

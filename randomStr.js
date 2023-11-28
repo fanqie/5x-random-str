@@ -76,3 +76,29 @@ export const randomStr = (len = 16,
     }
     return upperCase ? str.toUpperCase() : str;
 }
+
+export const ABC = (len = 16,
+                    separator = "",
+                    separatorSteps = 4) => {
+    return randomStr(len, [CHARS.ABC_XYZ],false,separator,separatorSteps)
+}
+export const abc = (len = 16,separator = "",
+                    separatorSteps = 4) => {
+    return randomStr(len, [CHARS.abc_xyz],false,separator,separatorSteps)
+}
+export const ABC_abc = (len = 16,separator = "",
+                        separatorSteps = 4) => {
+    return randomStr(len, [CHARS.ABC_XYZ, CHARS.abc_xyz],false,separator,separatorSteps)
+}
+export const ABC_abc_123 = (len = 16,separator = "",
+                            separatorSteps = 4) => {
+    return randomStr(len, [CHARS.ABC_XYZ, CHARS.abc_xyz, CHARS["1234567890"]],false,separator,separatorSteps)
+}
+export const strongPasswd = (len = 16,separator = "",
+                             separatorSteps = 4) => {
+    return randomStr(len, [CHARS.ABC_XYZ, CHARS.abc_xyz, CHARS["1234567890"], CHARS["!@#$%^&*()_"]],false,separator,separatorSteps)
+}
+export const superPasswd = (len = 16,separator = "",
+                             separatorSteps = 4) => {
+    return randomStr(len, [CHARS.ABC_XYZ, CHARS.abc_xyz, CHARS["1234567890"],CHARS["+.(~)[]?}|{][,-"], CHARS["!@#$%^&*()_"]],false,separator,separatorSteps)
+}
